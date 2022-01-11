@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  background-color: #ac8654;
+  color: white !important;
+}
+
+.gl_head {
+  text-align: center;
+  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  color: #1a1919;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.my_gallery {
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 20px;
+}
+
+.my_gallery .gl {
+  border: transparent !important;
+}
+
+.my_gallery Card.Img {
+  height: 10vh;
+}
+
+.my_gallery .c_title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.my_gallery .c_title span {
+  padding: 5px 5px 5px 5px;
+  border: 1px solid rgba(128, 114, 114, 0.911);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 200;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.my_gallery .gl_text {
+  font-size: 15px;
+}
+
+.my_gallery .gl_ft_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.my_gallery .gl_ft_text img {
+  width: 16px;
+  height: 14px;
+  margin-top: 6px;
+}
+
+.my_gallery .gl_divide {
+  margin-top: 5px;
+  border-top: 6px solid #ac8654;
+}
+
+.my_profiles .pr_img {
+  height: 40vh;
+}
+
+.my_profiles .card {
+  border: none !important;
+  text-align: center;
+}
+
+.my_profiles .card-title {
+  text-transform: uppercase;
+  font-size: 2.4em;
+}
+
+.my_profiles .card-title {
+  border-bottom: 1px solid #ac8654;
+}
+
+.my_profiles .card-text {
+  font-size: 0.9em;
+}
+
+.my_profiles a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #141947;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1200px) {
+  .gl_head {
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.7em;
+    color: #1a1919;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+  .my_gallery {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+  }
+  .my_gallery .gl {
+    border: transparent !important;
+  }
+  .my_gallery Card.Img {
+    height: 10vh;
+  }
+  .my_gallery .c_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .my_gallery .c_title span {
+    padding: 3px 3px 3px 3px;
+    border: 1px solid rgba(128, 114, 114, 0.911);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 200;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .my_gallery .c_title .gl_text {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .gl_head {
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.7em;
+    color: #1a1919;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .my_gallery {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+  }
+  .my_gallery .gl {
+    border: transparent !important;
+  }
+  .my_gallery Card.Img {
+    height: 10vh;
+  }
+  .my_gallery .c_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .my_gallery .c_title span {
+    padding: 3px 3px 3px 3px;
+    border: 1px solid rgba(128, 114, 114, 0.911);
+    border-radius: 4px;
+    font-size: 8px;
+    font-weight: 200;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .my_gallery .gl_text {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .gl_head {
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.7em;
+    color: #1a1919;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .my_gallery {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+  }
+  .my_gallery .gl {
+    border: transparent !important;
+  }
+  .my_gallery Card.Img {
+    height: 10vh;
+  }
+  .my_gallery .c_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .my_gallery .c_title span {
+    padding: 2px 3px 2px 3px;
+    border: 1px solid rgba(128, 114, 114, 0.911);
+    border-radius: 4px;
+    font-size: 6px;
+    font-weight: 200;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .my_gallery .gl_text {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .gl_head {
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.9em;
+    color: #1a1919;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+  }
+  .my_gallery {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+  }
+  .my_gallery .gl {
+    border: transparent !important;
+  }
+  .my_gallery Card.Img {
+    height: 10vh;
+  }
+  .my_gallery .c_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .my_gallery .c_title span {
+    padding: 2px 3px 2px 3px;
+    border: 1px solid rgba(128, 114, 114, 0.911);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 200;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .my_gallery .gl_text {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gl_head {
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.9em;
+    color: #1a1919;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    margin-top: 40px;
+  }
+  .my_gallery {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+  }
+  .my_gallery .gl {
+    border: transparent !important;
+  }
+  .my_gallery Card.Img {
+    height: 10vh;
+  }
+  .my_gallery .c_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .my_gallery .c_title span {
+    padding: 4px 4px 4px 4px;
+    border: 1px solid rgba(128, 114, 114, 0.911);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 200;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .my_gallery .gl_text {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .gl_head {
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7em;
+    color: #1a1919;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    margin-top: 40px;
+  }
+  .my_gallery {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+  }
+  .my_gallery .gl {
+    border: transparent !important;
+  }
+  .my_gallery Card.Img {
+    height: 10vh;
+  }
+  .my_gallery .c_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .my_gallery .c_title span {
+    padding: 4px 4px 4px 4px;
+    border: 1px solid rgba(128, 114, 114, 0.911);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 200;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .my_gallery .gl_text {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .gl_head {
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    color: #1a1919;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    margin-top: 40px;
+  }
+  .my_gallery {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 10px;
+  }
+  .my_gallery .gl {
+    border: transparent !important;
+  }
+  .my_gallery .c_title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .my_gallery .c_title span {
+    padding: 4px 4px 4px 4px;
+    border: 1px solid rgba(128, 114, 114, 0.911);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 200;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .my_gallery .gl_text {
+    font-size: 15px;
+  }
+  .my_profiles .pr_img {
+    height: 40vh;
+  }
+  .my_profiles .card {
+    border: none !important;
+    text-align: center;
+  }
+  .my_profiles .card-title {
+    text-transform: uppercase;
+    font-size: 1.6em;
+  }
+  .my_profiles .card-title {
+    border-bottom: 1px solid #ac8654;
+  }
+  .my_profiles .card-text {
+    font-size: 0.5em;
+  }
+  .my_profiles a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #141947;
+    font-weight: 500;
+    font-size: 0.8em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

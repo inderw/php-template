@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    background-color:rgb(172, 134, 84);
+    color: white!important;
+    
+}
+.gl_head{
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color:rgb(26, 25, 25);
+    letter-spacing: 1px;
+    margin-bottom: 30px ;
+    margin-top: 40px;
+}
+.my_gallery{
+    font-family: 'Montserrat', sans-serif;
+    margin-right:20px;
+    .gl{
+        border: transparent!important;
+    }
+    Card.Img{
+        height: 10vh;
+    }
+    .c_title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+        span{
+            padding: 5px 5px 5px 5px;
+            border:1px solid rgba(128, 114, 114, 0.911);
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 200;
+            text-decoration: none;
+           cursor: pointer;
+        }
+       
+    }
+    .gl_text{
+        font-size:15px;
+    }
+    .gl_ft_text{
+        display: flex;
+        font-size: 10px;
+        justify-content: space-between;
+        img{
+            width:16px;
+            height:14px;
+            margin-top: 6px;;
+        }
+    
+    }
+    .gl_divide{
+        margin-top: 5px;
+        border-top:6px solid rgb(172, 134, 84);
+     }
+}
+.my_profiles{
+    .pr_img{
+  
+        height: 40vh;
+    }
+    .card{
+        border: none!important;
+        text-align: center;
+    }
+    .card-title{
+        text-transform: uppercase;
+        font-size: 2.4em;
+    }
+    .card-title{
+        border-bottom: 1px solid rgb(172, 134, 84);
+    }
+    .card-text{
+        font-size: 0.9em;
+    }
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color:rgb(20, 25, 71);
+        font-weight:500;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .gl_head{
+        text-align: center;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.7em;
+        color:rgb(26, 25, 25);
+        letter-spacing: 1px;
+        margin-bottom: 30px ;
+    
+    }
+    .my_gallery{
+        font-family: 'Montserrat', sans-serif;
+        margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+        Card.Img{
+            height: 10vh;
+        }
+        .c_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                padding: 3px 3px 3px 3px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 10px;
+                font-weight: 200;
+                text-decoration: none;
+               cursor: pointer;
+            }
+            .gl_text{
+                font-size:10px;
+            }
+           
+        }
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .gl_head{
+        text-align: center;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.7em;
+        color:rgb(26, 25, 25);
+        letter-spacing: 1px;
+        margin-bottom: 30px ;
+        margin-top: 30px;
+    
+    }
+    .my_gallery{
+        font-family: 'Montserrat', sans-serif;
+        margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+        Card.Img{
+            height: 10vh;
+        }
+        .c_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                padding: 3px 3px 3px 3px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 8px;
+                font-weight: 200;
+                text-decoration: none;
+               cursor: pointer;
+            }
+           
+           
+        }
+        .gl_text{
+            font-size:12px;
+        }
+    }
+  }
+  @media only screen and (max-width: 940px) {
+    .gl_head{
+        text-align: center;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.7em;
+        color:rgb(26, 25, 25);
+        letter-spacing: 1px;
+        margin-bottom: 30px ;
+        margin-top: 30px;
+    }
+    .my_gallery{
+        font-family: 'Montserrat', sans-serif;
+        margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+        Card.Img{
+            height: 10vh;
+        }
+        .c_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 10px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                padding: 2px 3px 2px 3px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 6px;
+                font-weight: 200;
+                text-decoration: none;
+               cursor: pointer;
+            }
+           
+           
+        }
+        .gl_text{
+            font-size:11px;
+        }
+    }
+  }
+  @media only screen and (max-width: 870px) {
+    .gl_head{
+        text-align: center;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.9em;
+        color:rgb(26, 25, 25);
+        letter-spacing: 1px;
+        margin-bottom: 25px ;
+    
+    }
+    .my_gallery{
+        font-family: 'Montserrat', sans-serif;
+        margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+        Card.Img{
+            height: 10vh;
+        }
+        .c_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                padding: 2px 3px 2px 3px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 11px;
+                font-weight: 200;
+                text-decoration: none;
+               cursor: pointer;
+            }
+           
+           
+        }
+        .gl_text{
+            font-size:15px;
+        }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .gl_head{
+        text-align: center;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.9em;
+        color:rgb(26, 25, 25);
+        letter-spacing: 1px;
+        margin-bottom: 25px ;
+        margin-top: 40px;
+    
+    }
+    .my_gallery{
+        font-family: 'Montserrat', sans-serif;
+        margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+        Card.Img{
+            height: 10vh;
+        }
+        .c_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                padding: 4px 4px 4px 4px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 200;
+                text-decoration: none;
+               cursor: pointer;
+            }
+           
+           
+        }
+        .gl_text{
+            font-size:15px;
+        }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .gl_head{
+        text-align: center;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.7em;
+        color:rgb(26, 25, 25);
+        letter-spacing: 1px;
+        margin-bottom: 25px ;
+        margin-top: 40px;
+    
+    }
+    .my_gallery{
+        font-family: 'Montserrat', sans-serif;
+        margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+        Card.Img{
+            height: 10vh;
+        }
+        .c_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                padding: 4px 4px 4px 4px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 200;
+                text-decoration: none;
+               cursor: pointer;
+            }
+           
+           
+        }
+        .gl_text{
+            font-size:15px;
+        }
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .gl_head{
+        text-align: center;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.3em;
+        color:rgb(26, 25, 25);
+        letter-spacing: 1px;
+        margin-bottom: 25px ;
+        margin-top: 40px;
+    
+    }
+    .my_gallery{
+        font-family: 'Montserrat', sans-serif;
+        margin-right:10px;
+        .gl{
+            border: transparent!important;
+        }
+       
+        .c_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                padding: 4px 4px 4px 4px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 10px;
+                font-weight: 200;
+                text-decoration: none;
+               cursor: pointer;
+            }
+           
+           
+        }
+        .gl_text{
+            font-size:15px;
+        }
+    }
+    .my_profiles{
+        .pr_img{
+      
+            height: 40vh;
+        }
+        .card{
+            border: none!important;
+            text-align: center;
+        }
+        .card-title{
+            text-transform: uppercase;
+            font-size: 1.6em;
+        }
+        .card-title{
+            border-bottom: 1px solid rgb(172, 134, 84);
+        }
+        .card-text{
+            font-size: 0.5em;
+        }
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color:rgb(20, 25, 71);
+            font-weight:500;
+            font-size: 0.8em;
+        }
+    }
+  }
