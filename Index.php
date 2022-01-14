@@ -11,13 +11,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all.css">
 
 <body>
     <?php include "common/navbar.php" ?>
   <br><br><br>
     <?php include "common/profiles.php" ?>
-    <br><br>
+    <br>
     <?php include "common/gallery.php" ?>
+    <br>
+    <?php include "common/details.php "?>
+  <br>
+    <?php include "common/contactme.php" ;?>
+    <br>
+    <?php include "common/footer.php" ;?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>

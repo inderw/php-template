@@ -1,4 +1,5 @@
 <div class="container">
+    <hr class="bt-ed">
 <h1 class="gl_head">Featured Properties</h1>
     <div class="my_gallery">
         <div class="item px-4">
@@ -46,4 +47,6 @@
             </div>
         </div>
     </div>
+    <br>
+    <hr class="bt-ed">
 </div>
