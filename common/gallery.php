@@ -48,5 +48,4 @@
         </div>
     </div>
     <br>
-    <hr class="bt-ed">
 </div>

@@ -5,9 +5,18 @@
     font-family: 'Montserrat', sans-serif;
 }
 $m-light:#eece72;
+$bl-dark:rgb(12, 34, 66);
 nav{
-    background-color:#cfa527;
+    // background-color:#cfa527;
+    background-color: rgb(48, 47, 47);
     color: white!important;
+    font-weight: 500;
+    .navbar-brand{
+        color: #eece72!important;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
     
 }
 .bt-ed{
@@ -205,6 +214,76 @@ nav{
         
     }
 }
+.ab-main{
+    background-image: url('http://heather-kehoe.c21.ca/files/2021/04/Untitled-design-6-1024x683.jpg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: scroll;
+    background-size: auto;
+    .img-div{
+        // margin: 40px 30px 40px 0px;
+        display: flex;
+        justify-content: end;
+    }
+    img{
+        max-width: 63%;
+        border: 10px solid rgb(11, 45, 85);
+        margin-right:50px ;
+    }
+    .ct-div{
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    
+    background: white;
+    .ab-heading-text{
+        color: #002C52;
+       background: transparent;
+       font-size: 1em;
+    }
+    .ab-heading-text2{
+        font-size: 1.7em;
+        margin: 0;
+        padding: 0;
+    }
+    }
+    h1{
+        background-color: white;
+    }
+}
+.ab-details{
+    h1{
+      color: #002C52;;
+    }
+    p{
+        font-size: 16px;
+    }
+    .cd-text{
+        font-size: 15px;
+        text-align: center;
+    }
+}
+.y-sections{
+    background-color: $bl-dark;
+    color: white;
+    h4{
+        text-align: center;
+        color: $m-light;
+    }
+    p{
+        text-align: center;
+    }
+    .tp-head{
+        text-align: left;
+        margin-top: 5px;
+    }
+    .side-space{
+        margin-left:10%!important;
+        margin-right: 10%!important;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .gl_head{
         text-align: center;
@@ -244,6 +323,51 @@ nav{
                 font-size:10px;
             }
            
+        }
+    }
+    .ft-main{
+        background-color: rgb(48, 47, 47);
+        .ft-head{
+            color:#eece72;
+            margin: 30px 0px 0px 20px;
+            font-size: 15px;
+        }
+        .ft-text{
+            margin-left:20px;
+            margin-top: 10px;
+            color: white;
+            font-size: 15px;
+        }
+        .ft-icon{
+        text-decoration: none;
+        color:rgb(212, 204, 204);
+        font-size:22px;
+        margin:0px 2px 0px 2px;
+        }
+        .ft-img{
+           display: inline;
+           height: auto;
+           max-width: 100%;
+           justify-content: left;
+           img{
+               position: relative;
+               margin-top: 10%;
+               margin-left: 26%;
+           }
+        }
+        .ft-text2{
+            p{
+                color:rgb(143, 142, 142);
+                font-size: 13px;
+            }
+            h5{
+                text-align: center;
+                color: white;
+                font-size: 14px;
+                font-weight: bold;
+                margin-top: 4px;
+            }
+            
         }
     }
   }
@@ -290,6 +414,103 @@ nav{
             font-size:12px;
         }
     }
+    .ft-main{
+        background-color: rgb(48, 47, 47);
+        .ft-head{
+            color:#eece72;
+            margin: 30px 0px 0px 20px;
+            font-size: 15px;
+        }
+        .ft-text{
+            margin-left:20px;
+            margin-top: 10px;
+            color: white;
+            font-size: 15px;
+        }
+        .ft-icon{
+        text-decoration: none;
+        color:rgb(212, 204, 204);
+        font-size:22px;
+        margin:0px 2px 0px 2px;
+        }
+        .ft-img{
+           display: inline;
+           height: auto;
+           max-width: 100%;
+           justify-content: left;
+           img{
+               position: relative;
+               margin-top: 10%;
+               margin-left: 26%;
+           }
+        }
+        .ft-text2{
+            p{
+                color:rgb(143, 142, 142);
+                font-size: 13px;
+            }
+            h5{
+                text-align: center;
+                color: white;
+                font-size: 14px;
+                font-weight: bold;
+                margin-top: 4px;
+            }
+            
+        }
+    }
+    .ab-main{
+        background-image: url('http://heather-kehoe.c21.ca/files/2021/04/Untitled-design-6-1024x683.jpg');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-attachment: scroll;
+        background-size: auto;
+        .img-div{
+            // margin: 40px 30px 40px 0px;
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            max-width: 80%;
+            border: 10px solid rgb(11, 45, 85);
+            margin-left:50px ;
+        }
+        .ct-div{
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        
+        background: white;
+        .ab-heading-text{
+            margin-top: 10px;
+            color: #002C52;
+           background: transparent;
+           font-size: 1em;
+        }
+        .ab-heading-text2{
+            font-size: 1.7em;
+            margin: 0;
+            padding: 0;
+        }
+        }
+        h1{
+            background-color: white;
+            font-size: 2.3em;
+        }
+    }
+    .ab-details{
+        h1{
+          color: #002C52;;
+        }
+        p{
+            font-size: 16px;
+        }
+        .cd-text{
+            font-size: 15px;
+            text-align:left;
+        }
+    }
   }
   @media only screen and (max-width: 940px) {
     .gl_head{
@@ -333,51 +554,7 @@ nav{
             font-size:11px;
         }
     }
-    .ft-main{
-        background-color: rgb(48, 47, 47);
-        .ft-head{
-            color:#eece72;
-            margin: 30px 0px 0px 20px;
-            font-size: 13px;
-        }
-        .ft-text{
-            margin-left:20px;
-            margin-top: 10px;
-            color: white;
-            font-size: 12px;
-        }
-        .ft-icon{
-        text-decoration: none;
-        color:rgb(212, 204, 204);
-        font-size:18px;
-        margin:0px 2px 0px 2px;
-        }
-        .ft-img{
-           display: inline;
-           height: auto;
-           max-width: 100%;
-           justify-content: left;
-           img{
-               position: absolute;
-               margin-top: 10%;
-               margin-left: 26%;
-           }
-        }
-        .ft-text2{
-            p{
-                color:rgb(143, 142, 142);
-                font-size: 13px;
-            }
-            h5{
-                text-align: center;
-                color: white;
-                font-size: 14px;
-                font-weight: bold;
-                margin-top: 4px;
-            }
-            
-        }
-    }
+   
     .ft-main{
         background-color: rgb(48, 47, 47);
         .ft-head{
@@ -394,7 +571,7 @@ nav{
         .ft-icon{
         text-decoration: none;
         color:rgb(212, 204, 204);
-        font-size:25px;
+        font-size:22px;
         margin:0px 2px 0px 2px;
         }
         .ft-img{
@@ -579,8 +756,48 @@ nav{
             
         }
     }
+    .ab-main{
+        background-image: url('http://heather-kehoe.c21.ca/files/2021/04/Untitled-design-6-1024x683.jpg');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-attachment: scroll;
+        background-size: auto;
+        .img-div{
+            // margin: 40px 30px 40px 0px;
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            max-width: 80%;
+            border: 10px solid rgb(11, 45, 85);
+            margin-left:50px ;
+        }
+        .ct-div{
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        
+        background: white;
+        .ab-heading-text{
+            margin-top: 10px;
+            color: #002C52;
+           background: transparent;
+           font-size: 1em;
+        }
+        .ab-heading-text2{
+            font-size: 1.4em;
+            margin: 0;
+            padding: 0;
+        }
+        }
+        h1{
+            background-color: white;
+            font-size: 2em;
+        }
+    }
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .gl_head{
         text-align: center;
         font-weight: 100;
@@ -648,7 +865,7 @@ nav{
            max-width: 100%;
            justify-content: left;
            img{
-               position: absolute;
+               position: relative;
                margin-top: 10%;
                margin-left: 26%;
            }
@@ -666,6 +883,85 @@ nav{
                 margin-top: 4px;
             }
             
+        }
+    }
+    .ab-main{
+        background-image: url('http://heather-kehoe.c21.ca/files/2021/04/Untitled-design-6-1024x683.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: auto;
+        display: flex;
+        justify-content: center;
+        .img-div{
+            // margin: 40px 30px 40px 0px;
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            max-width: 80%;
+            border: 8px solid rgb(11, 45, 85);
+            
+           
+        }
+        .ct-div{
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        padding-left: 50px!important;
+        max-width: 60%;
+        
+      position: relative;
+        padding-left: 50%;
+        background: white;
+        .ab-heading-text{
+            margin-top: 10px;
+            color: #002C52;
+           background: transparent;
+           font-size: 1em;
+        }
+        .ab-heading-text2{
+            font-size: 1.7em;
+            margin: 0;
+            padding: 0;
+        }
+        }
+        h1{
+            background-color: white;
+            font-size: 2em;
+        }
+    }
+    .ab-details{
+        h1{
+          color: #002C52;;
+        }
+        p{
+            font-size: 14px;
+        }
+        .cd-text{
+            font-size: 14px;
+            text-align:left;
+        }
+    }
+    .y-sections{
+        background-color: $bl-dark;
+        color: white;
+        h4{
+            text-align: center;
+            color: $m-light;
+        }
+        p{
+            text-align: center;
+            font-size:13px;
+        }
+        .tp-head{
+            text-align: left;
+            margin-top: 5px;
+        }
+        .side-space{
+            margin-left:3%!important;
+            margin-right: 3%!important;
         }
     }
   }
@@ -809,6 +1105,86 @@ nav{
                 margin-top: 4px;
             }
             
+        }
+    }
+    .ab-main{
+        background-image: url('http://heather-kehoe.c21.ca/files/2021/04/Untitled-design-6-1024x683.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: auto;
+        display: flex;
+        justify-content: center;
+        .img-div{
+            // margin: 40px 30px 40px 0px;
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            max-width: 58%;
+            border: 8px solid rgb(11, 45, 85);
+            
+           
+        }
+        .ct-div{
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        padding-left: 50px!important;
+        max-width: 80%;
+        padding: top 20px !important;
+        position: relative;
+        padding-left: 50%;
+        background: white;
+        .ab-heading-text{
+            margin-top: 10px;
+            color: #002C52;
+           background: transparent;
+           font-size: 1em;
+        }
+        .ab-heading-text2{
+            font-size: 1.8em;
+            margin: 0;
+            padding: 0;
+        }
+        }
+        h1{
+            background-color: white;
+            font-size: 2em;
+        }
+    }
+    .ab-details{
+        h1{
+          color: #002C52;;
+        }
+        p{
+            font-size: 13px;
+        }
+        .cd-text{
+            font-size: 13px;
+            text-align:left;
+        }
+    }
+    .y-sections{
+        background-color: $bl-dark;
+        color: white;
+        h4{
+            text-align: center;
+            color: $m-light;
+            font-size: 1.4em;
+        }
+        p{
+            text-align: center;
+            font-size:11px;
+        }
+        .tp-head{
+            text-align: left;
+            margin-top: 5px;
+        }
+        .side-space{
+            margin-left:3%!important;
+            margin-right: 3%!important;
         }
     }
   }
@@ -980,6 +1356,53 @@ nav{
             
         }
     }
+    .ab-main{
+        background-image: url('http://heather-kehoe.c21.ca/files/2021/04/Untitled-design-6-1024x683.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: auto;
+        display: flex;
+        justify-content: center;
+        .img-div{
+            // margin: 40px 30px 40px 0px;
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            max-width: 58%;
+            border: 8px solid rgb(11, 45, 85);
+            
+           
+        }
+        .ct-div{
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+      
+        max-width: 80%;
+        margin-top: 100px;
+        position: relative;
+        padding-left: 50%;
+        background: white;
+        .ab-heading-text{
+            margin-top: 10px;
+            color: #002C52;
+           background: transparent;
+           font-size: 1em;
+        }
+        .ab-heading-text2{
+            font-size: 1.4em;
+            margin: 0;
+            padding: 0;
+        }
+        }
+        h1{
+            background-color: white;
+            font-size: 1.5em;
+        }
+    }
   }
   @media only screen and (max-width: 375px) {
     .gl_head{
@@ -1148,5 +1571,53 @@ nav{
             }
             
         }
+    }
+    .ab-main{
+        background-image: url('http://heather-kehoe.c21.ca/files/2021/04/Untitled-design-6-1024x683.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: auto;
+        display: flex;
+        justify-content: center;
+        .img-div{
+            // margin: 40px 30px 40px 0px;
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            max-width: 58%;
+            border: 8px solid rgb(11, 45, 85);
+            
+           
+        }
+        .ct-div{
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+      
+        max-width: 80%;
+        margin-top: 100px;
+        position: relative;
+        padding-left: 50%;
+        background: white;
+        .ab-heading-text{
+            margin-top: 10px;
+            color: #002C52;
+           background: transparent;
+           font-size: 1em;
+           h1{
+            background-color: white;
+            font-size: 1.3em;
+        }
+        }
+        .ab-heading-text2{
+            font-size: 1.3em;
+            margin: 0;
+            padding: 0;
+        }
+        }
+      
     }
   }
