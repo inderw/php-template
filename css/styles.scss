@@ -38,9 +38,7 @@ nav{
     .gl{
         border: transparent!important;
     }
-    Card.Img{
-        height: 10vh;
-    }
+   
     .c_title{
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
@@ -283,7 +281,127 @@ nav{
         margin-right: 10%!important;
     }
 }
-
+.wrap{
+    .search {
+        width: 100%;
+        position: relative;
+        display: flex;
+      }
+      input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+      .form-control{
+        border-radius: 0;
+       
+        border: 1px solid rgb(136, 136, 136);
+        border-right: none;
+      
+     
+        
+        
+        color: #1a1a1a;
+        
+      }
+      .form-control:focus {
+        box-shadow: none;
+        outline: none;
+        border: 1px solid rgb(136, 136, 136);
+      }
+      .searchTerm {
+        width: 100%;
+        border-right: none;
+        padding: 7px;
+        height: 25px;
+        outline: none;
+        color: #1c1d1d;
+      }
+      
+      .searchTerm:focus{
+        color: #3a3a3a;
+      }
+      
+      .searchButton {
+        width: 40px;
+        height: 38px;
+        border: 1px solid #3a3a3a;
+        background: #3a3a3a;
+        text-align: center;
+        color: #fff;
+        font-weight: lighter;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      
+      /*Resize the wrap to see the search bar change!*/
+      .wrap{
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+     
+}
+.sort-part{
+    ul{
+       li{
+           list-style: none;
+       }
+    }
+}
+.stuck {
+    // position: fixed;
+    // overflow-y: scroll;
+    font-family: 'Montserrat', sans-serif;
+    // margin-right:20px;
+    .gl{
+        border: transparent!important;
+    }
+   
+    .fa_title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 11px;
+        display: flex;
+        justify-content: space-between;
+        span{
+            padding: 4px 4px 4px 4px;
+            border:1px solid rgba(128, 114, 114, 0.911);
+            border-radius: 4px;
+            font-size: 9px;
+            font-weight: 200;
+            text-decoration: none;
+           cursor: pointer;
+        }
+       
+    }
+    .gl_text{
+        font-size:15px;
+    }
+    .fa_text{
+        display: flex;
+        font-size: 15px;
+        justify-content: space-between;
+        img{
+            width:16px;
+            height:14px;
+            margin-top: 6px;;
+        }
+    
+    }
+    .fa_divide{
+        margin-top: 5px;
+        border-top:6px solid rgb(172, 134, 84);
+     }
+  
+    // height: 74%;
+    // overflow-y:scroll;
+    // overflow-x:hidden;
+    
+}
 @media only screen and (max-width: 1200px) {
     .gl_head{
         text-align: center;
@@ -1393,14 +1511,14 @@ nav{
            font-size: 1em;
         }
         .ab-heading-text2{
-            font-size: 1.4em;
+            font-size: 1.2em;
             margin: 0;
             padding: 0;
         }
         }
         h1{
             background-color: white;
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
     }
   }
@@ -1609,11 +1727,11 @@ nav{
            font-size: 1em;
            h1{
             background-color: white;
-            font-size: 1.3em;
+            font-size: 1.1em;
         }
         }
         .ab-heading-text2{
-            font-size: 1.3em;
+            font-size: 1.1em;
             margin: 0;
             padding: 0;
         }

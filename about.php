@@ -1,3 +1,4 @@
+<?php require "common/config.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -7,16 +7,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.php">Home</a>
+        <a class="nav-link text-white" href="index.php">HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="about.php">About</a>
+        <a class="nav-link text-white" href="about.php">ABOUT</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">Contact Us</a>
+        <a class="nav-link text-white" href="fahome.php">FIND A HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">Blog</a>
+        <a class="nav-link text-white" href="#">BLOG</a>
       </li>
     </ul>
   
