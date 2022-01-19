@@ -367,12 +367,12 @@ button:focus {
         font-size: 11px;
         display: flex;
         justify-content: space-between;
-        span{
+       a{   color:rgba(32, 32, 32, 0.911);
             padding: 4px 4px 4px 4px;
             border:1px solid rgba(128, 114, 114, 0.911);
             border-radius: 4px;
             font-size: 9px;
-            font-weight: 200;
+            font-weight: 500;
             text-decoration: none;
            cursor: pointer;
         }
@@ -383,7 +383,7 @@ button:focus {
     }
     .fa_text{
         display: flex;
-        font-size: 15px;
+        font-size: 14px;
         justify-content: space-between;
         img{
             width:16px;
@@ -400,6 +400,14 @@ button:focus {
     // height: 74%;
     // overflow-y:scroll;
     // overflow-x:hidden;
+    
+}
+.map-img{
+    img{
+        width:100%;
+        height: auto;
+    }
+
     
 }
 @media only screen and (max-width: 1200px) {
@@ -629,6 +637,56 @@ button:focus {
             text-align:left;
         }
     }
+    .stuck {
+        // position: fixed;
+        // overflow-y: scroll;
+        font-family: 'Montserrat', sans-serif;
+        // margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+       
+        .fa_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                padding: 4px 3px 4px 3px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 8px;
+                font-weight: 200;
+                text-decoration: none;
+               cursor: pointer;
+            }
+           
+        }
+        .gl_text{
+            font-size:13px;
+        }
+        .fa_text{
+            display: flex;
+            font-size: 13px;
+            justify-content: space-between;
+            img{
+                width:16px;
+                height:14px;
+                margin-top: 6px;;
+            }
+        
+        }
+        .fa_divide{
+            margin-top: 5px;
+            border-top:6px solid rgb(172, 134, 84);
+         }
+      
+        // height: 74%;
+        // overflow-y:scroll;
+        // overflow-x:hidden;
+        
+    }
   }
   @media only screen and (max-width: 940px) {
     .gl_head{
@@ -745,7 +803,7 @@ button:focus {
             font-size: 15px;
             display: flex;
             justify-content: space-between;
-            span{
+            a{
                 padding: 2px 3px 2px 3px;
                 border:1px solid rgba(128, 114, 114, 0.911);
                 border-radius: 4px;
@@ -914,6 +972,56 @@ button:focus {
             font-size: 2em;
         }
     }
+    .stuck {
+        // position: fixed;
+        // overflow-y: scroll;
+        font-family: 'Montserrat', sans-serif;
+        // margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+       
+        .fa_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+           a{
+                padding: 2px 2px 2px 2px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 3px;
+                font-size: 7px;
+                font-weight: 200;
+                text-decoration: none;
+               cursor: pointer;
+            }
+           
+        }
+        .gl_text{
+            font-size:13px;
+        }
+        .fa_text{
+            display: flex;
+            font-size: 13px;
+            justify-content: space-between;
+            img{
+                width:16px;
+                height:14px;
+                margin-top: 6px;;
+            }
+        
+        }
+        .fa_divide{
+            margin-top: 5px;
+            border-top:6px solid rgb(172, 134, 84);
+         }
+      
+        // height: 74%;
+        // overflow-y:scroll;
+        // overflow-x:hidden;
+        
+    }
   }
   @media only screen and (max-width: 769px) {
     .gl_head{
@@ -1081,6 +1189,56 @@ button:focus {
             margin-left:3%!important;
             margin-right: 3%!important;
         }
+    }
+    .stuck {
+        // position: fixed;
+        // overflow-y: scroll;
+        font-family: 'Montserrat', sans-serif;
+        // margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+       
+        .fa_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 10px;
+            display: flex;
+            justify-content: space-between;
+            a{
+                padding: 3px 2px 3px 2px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 2px;
+                color:rgba(128, 114, 114, 0.911);
+                font-size: 6px;
+                font-weight: 900;
+                text-decoration: none;
+                cursor: pointer;            }
+           
+        }
+        .gl_text{
+            font-size:13px;
+        }
+        .fa_text{
+            display: flex;
+            font-size: 13px;
+            justify-content: space-between;
+            img{
+                width:16px;
+                height:14px;
+                margin-top: 6px;;
+            }
+        
+        }
+        .fa_divide{
+            margin-top: 5px;
+            border-top:6px solid rgb(172, 134, 84);
+         }
+      
+        // height: 74%;
+        // overflow-y:scroll;
+        // overflow-x:hidden;
+        
     }
   }
   @media only screen and (max-width: 600px) {
@@ -1521,6 +1679,57 @@ button:focus {
             font-size: 1.2em;
         }
     }
+    .stuck {
+        // position: fixed;
+        // overflow-y: scroll;
+        font-family: 'Montserrat', sans-serif;
+        // margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+       
+        .fa_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+           a{   color:rgba(32, 32, 32, 0.911);
+                padding: 4px 4px 4px 4px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 11px;
+                font-weight: 500;
+                text-decoration: none;
+                margin-bottom:3px ;
+               cursor: pointer;
+            }
+           
+        }
+        .gl_text{
+            font-size:15px;
+        }
+        .fa_text{
+            display: flex;
+            font-size: 15px;
+            justify-content: space-between;
+            img{
+                width:16px;
+                height:14px;
+                margin-top: 6px;;
+            }
+        
+        }
+        .fa_divide{
+            margin-top: 5px;
+            border-top:6px solid rgb(172, 134, 84);
+         }
+      
+        // height: 74%;
+        // overflow-y:scroll;
+        // overflow-x:hidden;
+        
+    }
   }
   @media only screen and (max-width: 375px) {
     .gl_head{
@@ -1737,5 +1946,55 @@ button:focus {
         }
         }
       
+    }  .stuck {
+        // position: fixed;
+        // overflow-y: scroll;
+        font-family: 'Montserrat', sans-serif;
+        // margin-right:20px;
+        .gl{
+            border: transparent!important;
+        }
+       
+        .fa_title{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+           a{   color:rgba(32, 32, 32, 0.911);
+                padding: 4px 4px 4px 4px;
+                border:1px solid rgba(128, 114, 114, 0.911);
+                border-radius: 4px;
+                font-size: 9px;
+                font-weight: 500;
+                text-decoration: none;
+                margin-bottom:3px ;
+               cursor: pointer;
+            }
+           
+        }
+        .gl_text{
+            font-size:15px;
+        }
+        .fa_text{
+            display: flex;
+            font-size: 13px;
+            justify-content: space-between;
+            img{
+                width:16px;
+                height:14px;
+                margin-top: 6px;;
+            }
+        
+        }
+        .fa_divide{
+            margin-top: 5px;
+            border-top:6px solid rgb(172, 134, 84);
+         }
+      
+        // height: 74%;
+        // overflow-y:scroll;
+        // overflow-x:hidden;
+        
     }
   }

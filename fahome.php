@@ -20,10 +20,9 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 m-0 p-0">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 m-0 p-0 border">
 
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 p-0">
+              
                         <div class="row px-2 py-2 bg-light m-0 p-0">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
 
@@ -40,39 +39,38 @@
                             </div>
 
                         </div>
-                        <div class="row stuck m-0 p-0">
-                        <?php
-            $sn = 1;
-            $prd_fetch =  "select * from prp_products";
-            $stmt   = $DB->prepare($prd_fetch);
-             $stmt->execute();
-             $result =$stmt->fetchAll();
+                        <div class="row stuck py-4 px-4 m-0 p-0">
+                            <?php
+                            $sn = 1;
+                            $prd_fetch =  "select * from prp_products";
+                            $stmt   = $DB->prepare($prd_fetch);
+                            $stmt->execute();
+                            $result = $stmt->fetchAll();
 
-             if (!empty($result)) {
-               foreach($result as $row)  {
-            ?>
-                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                                <div class="card carfa_card">
-                                    <img class="card-img-top w-100" src="admin/prod_img/<?php echo $row['prop_img']?>" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title fa_title"><?php echo $row['prop_size']; ?><span>Contact Agent</span></h5>
-                                        <p class="card-text fa_text"><?php echo $row['prop_location']; ?></p>
+                            if (!empty($result)) {
+                                foreach ($result as $row) {
+                            ?>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 py-2">
+                                        <div class="card carfa_card">
+                                            <img class="card-img-top w-100" src="admin/prod_img/<?php echo $row['prop_img'] ?>" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title fa_title"><?php echo $row['prop_size']; ?><a href="#">Contact Agent</a></h5>
+                                                <p class="card-text fa_text"><?php echo $row['prop_location']; ?></p>
+                                            </div>
+                                            <span class="fa_text">Active <img src="https://templates.c21canada.moxiworks.net/files/2021/01/C21_Seal_RelentlessGold_4C-235x300.png"></img></span>
+                                            <span class="fa_divide">&nbsp;</span>
+                                        </div>
                                     </div>
-                                    <span class="fa_text">Active <img src="https://templates.c21canada.moxiworks.net/files/2021/01/C21_Seal_RelentlessGold_4C-235x300.png"></img></span>
-                                    <span class="fa_divide">&nbsp;</span>
-                                </div>
-                            </div>
                             <?php $sn++;
-               }
-            } ?>
+                                }
+                            } ?>
                         </div>
-                    </div>
-                </div>
-                <br>
-
             </div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 map-img m-0 p-0">
-                <img src="images/map.png" width="100%" alt="map">
+         
+
+          
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 map-img m-0 p-0">
+                <img src="images/map.png"  alt="map">
             </div>
         </div>
     </div>
