@@ -69,7 +69,7 @@
          
 
           
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 map-img m-0 p-0">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 map-img m-0 p-0 sticky-right">
                 <img src="images/map.png"  alt="map">
             </div>
         </div>

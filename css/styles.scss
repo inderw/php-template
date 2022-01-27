@@ -6,6 +6,11 @@
 }
 $m-light:#eece72;
 $bl-dark:rgb(12, 34, 66);
+.stcky-right{
+    position: fixed;
+display: flex;
+  align-self: flex-end;
+}
 nav{
     // background-color:#cfa527;
     background-color: rgb(48, 47, 47);

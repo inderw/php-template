@@ -1,9 +1,8 @@
 <?php
 require_once("includes/config.php");
-// if (!isset($_SESSION["user_id"]) || $_SESSION["user_id"] == "") {
-//     // not logged in send to login page
-//     redirect("index.php");
-// }
+if (!isset($_SESSION['userSession'])) {
+    header("Location:index.php");
+}
 
 // set page title
 $title = "Dashboard";
@@ -14,7 +13,7 @@ $title = "Dashboard";
 <html lang="en">
 
 <head>
- 
+
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -27,8 +26,8 @@ $title = "Dashboard";
 
     <!-- vendor css -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.css"/>
-<title>Add Products</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.css" />
+    <title>Add Products</title>
 
 </head>
 
@@ -80,27 +79,51 @@ $title = "Dashboard";
 
                         if (isset($_POST['sbtnsave'])) {
 
-                         
+                            $size = $_POST['prop_size'];
+                            $price = $_POST['price'];
+                            $location = $_POST['location'];
+                            $desc = $_POST['desc'];
 
-                        
-
-                            $size=$_POST['prop_size'];
-                            $price=$_POST['price'];
-                            $location=$_POST['location'];
-                            $desc=$_POST['desc'];
-                            $imgfile = basename($_FILES["imgfile"]["name"]);
+                            $imgfile =    $_FILES["imgfile"]["name"];
                             $tmp_dir = $_FILES['imgfile']['tmp_name'];
 
+                            $imgfile2 = basename($_FILES["imgfile2"]["name"]);
+                            $tmp_dir2 = $_FILES['imgfile2']['tmp_name'];
+
+                            $imgfile3 = basename($_FILES["imgfile3"]["name"]);
+                            $tmp_dir3 = $_FILES['imgfile3']['tmp_name'];
+
+                            $imgfile4 = basename($_FILES["imgfile4"]["name"]);
+                            $tmp_dir4 = $_FILES['imgfile4']['tmp_name'];
+
+                            $imgfile5 = basename($_FILES["imgfile5"]["name"]);
+                            $tmp_dir5 = $_FILES['imgfile']['tmp_name'];
 
                             $imgSize = $_FILES['imgfile']['size'];
-                            $sizeKb = $imgSize / 1024;
+
+                            $imgSize2 = $_FILES['imgfile2']['size'];
+
+                            $imgSize3 = $_FILES['imgfile3']['size'];
+
+                            $imgSize4 = $_FILES['imgfile4']['size'];
+
+                            $imgSize5 = $_FILES['imgfile5']['size'];
+
+                            $sizeKb =  $imgSize / 1024;
+                            $sizeKb2 = $imgSize2 / 1024;
+                            $sizeKb3 = $imgSize3 / 1024;
+                            $sizeKb4 = $imgSize4 / 1024;
+                            $sizeKb5 = $imgSize5 / 1024;
+
                             $sizeMb = floor($sizeKb / 1024) . ' ' . 'Mb';
-
-
-
+                            $sizeMb2 = floor($sizeKb / 1024) . ' ' . 'Mb';
+                            $sizeMb3 = floor($sizeKb / 1024) . ' ' . 'Mb';
+                            $sizeMb4 = floor($sizeKb / 1024) . ' ' . 'Mb';
+                            $sizeMb5 = floor($sizeKb / 1024) . ' ' . 'Mb';
 
 
                             //for getting package id
+
 
                             if (empty($size)) {
                                 $errMSG = "Please Enter Home size";
@@ -110,28 +133,73 @@ $title = "Dashboard";
                                 $errMSG = "Please Enter Location";
                             } else if (empty($imgfile)) {
                                 $errMSG = "Please Select IMAGE.";
-                            } else if (empty($desc)) {
+                            } 
+                            else if (empty($imgfile2)) {
+                                $errMSG = "Please Select IMAGE 2.";
+                            }
+                            else if (empty($imgfile3)) {
+                                $errMSG = "Please Select IMAGE 3.";
+                            }
+                            else if (empty($imgfile4)) {
+                                $errMSG = "Please Select IMAGE 4.";
+                            }
+                            else if (empty($imgfile5)) {
+                                $errMSG = "Please Select IMAGE 5.";
+                            }
+                            else if (empty($desc)) {
                                 $errMSG = "Please Enter description.";
                             } else {
-                                $upload_dir = 'prod_img'; // upload directory
-
+                                $q = "select max(prop_id) as pid from prp_products";
+                                $stmt = $DB->prepare($q);
+                                $stmt->execute();
+                                $result = $stmt->fetch();
+                                $productid = $result['pid'] + 1;
+                                $upload_dir = "prod_img/$productid";
+                              
+                                if (!is_dir($upload_dir)) {
+                                   mkdir('prod_img/'.$productid);
+                                } // upload directory
+                                  
+                                  
+                               
                                 $imgExt = strtolower(pathinfo($imgfile, PATHINFO_EXTENSION)); // get image extension
 
                                 // valid image extensions
                                 $valid_extensions = array('jpg', 'jpeg', 'png', 'GIF'); // valid extensions
 
                                 // rename uploading image
-                            
-                              
-                                
+
+
+
                                 if (in_array($imgExt, $valid_extensions)) {
-                                    // Check file size '9MB'
-                                    if ($imgSize < 9000000) {
+                                    
+                                    if ($imgSize < 1000000) {
                                         move_uploaded_file($tmp_dir, "$upload_dir/$imgfile");
-                                    } else {
+                                    }  else{
                                         $errMSG = "Sorry, your file is too large.";
                                     }
-                                } else {
+                                    if ($imgSize2 < 1000000) {
+                                        move_uploaded_file($tmp_dir2, "$upload_dir/$imgfile2");
+                                    }  else{
+                                        $errMSG = "Sorry, your file is too large.";
+                                    }
+                                    if ($imgSize3 < 1000000) {
+                                        move_uploaded_file($tmp_dir3, "$upload_dir/$imgfile3");
+                                    }  else{
+                                        $errMSG = "Sorry, your file is too large.";
+                                    }
+                                    if ($imgSize4 < 1000000) {
+                                        move_uploaded_file($tmp_dir4, "$upload_dir/$imgfile4");
+                                    }  else{
+                                        $errMSG = "Sorry, your file is too large.";
+                                    }
+                                    if ($imgSize5 < 1000000) {
+                                        move_uploaded_file($tmp_dir5, "$upload_dir/$imgfile5");
+                                    }  else{
+                                        $errMSG = "Sorry, your file is too large.";
+                                    }
+                                }
+                               else {
                                     $errMSG = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
                                 }
                             }
@@ -142,12 +210,20 @@ $title = "Dashboard";
                                 $insert = "insert into prp_products set
                                 prop_size=:size,
                                 prop_img=:img,
+                                prop_img2=:img2,
+                                prop_img3=:img3,
+                                prop_img4=:img4,
+                                prop_img5=:img5,
                                 prop_location=:location,
                                 prop_price=:price,
                                 prop_desc=:desc";
                                 $stmt = $DB->prepare($insert);
                                 $stmt->bindParam(':size', $size);
                                 $stmt->bindParam(':img', $imgfile);
+                                $stmt->bindParam(':img2', $imgfile2);
+                                $stmt->bindParam(':img3', $imgfile3);
+                                $stmt->bindParam(':img4', $imgfile4);
+                                $stmt->bindParam(':img5', $imgfile5);
                                 $stmt->bindParam(':location', $location);
                                 $stmt->bindParam(':price', $price);
                                 $stmt->bindParam(':desc', $desc);
@@ -181,19 +257,57 @@ $title = "Dashboard";
                                     </div>
 
                                     <br>
-
                                     <div class="input-group cust-file-button mb-3">
                                         <div class="input-group-prepend">
                                             <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
                                         </div>
                                         <div class="custom-file">
-
                                             <input type="file" class="form-control" id="imgfile" name="imgfile" placeholder="Image File">
-                                            <label class="custom-file-label" for="imgfile">Choose Product Image</label>
+                                            <label class="custom-file-label" for="imgfile">Choose Product Image 1</label>
                                         </div>
                                     </div>
-                                    
                                     <br>
+                                    <div class="input-group cust-file-button mb-3">
+                                        <div class="input-group-prepend">
+                                            <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="form-control" id="imgfile2" name="imgfile2" placeholder="Image File2">
+                                            <label class="custom-file-label" for="imgfile2">Choose Product Image 2</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="input-group cust-file-button mb-3">
+                                        <div class="input-group-prepend">
+                                            <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="form-control" id="imgfile3" name="imgfile3" placeholder="Image File3">
+                                            <label class="custom-file-label" for="imgfile3">Choose Product Image 3</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="input-group cust-file-button mb-3">
+                                        <div class="input-group-prepend">
+                                            <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="form-control" id="imgfile4" name="imgfile4" placeholder="Image File4">
+                                            <label class="custom-file-label" for="imgfile4">Choose Product Image 4</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="input-group cust-file-button mb-3">
+                                        <div class="input-group-prepend">
+                                            <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="form-control" id="imgfile5" name="imgfile5" placeholder="Image File5">
+                                            <label class="custom-file-label" for="imgfile5">Choose Product Image 5</label>
+                                        </div>
+                                    </div>
+                                    <br>
+
                                     <div class="input-group col-xs-6"> <span class="input-group-addon btn btn-primary"><i class="fas fa-location-arrow"></i></span>
                                         <input type="text" class="form-control" name="location" placeholder="Home Location">
                                     </div>

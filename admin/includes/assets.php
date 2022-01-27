@@ -1,9 +1,8 @@
 <?php
 require_once("config.php");
-// if (!isset($_SESSION["user_id"]) || $_SESSION["user_id"] == "") {
-//     // not logged in send to login page
-//     redirect("index.php");
-// }
+if (!isset($_SESSION['userSession'])) {
+    header("Location:index.php");
+   }
 
 // set page title
 $title = "Dashboard";
