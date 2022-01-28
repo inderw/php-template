@@ -415,6 +415,27 @@ button:focus {
 
     
 }
+#contactus{
+    .md-hide{
+        background-color: $m-light;
+    }
+    input{
+        border-radius: 50px;
+    }
+    textarea{
+        border-radius: 20px;
+    }
+    .img-bg{
+        background-image: url('https://heather-kehoe.c21.ca/files/2021/04/Add-a-heading-2.jpg');
+        background-size: cover;
+        
+    opacity: 0.9;
+    background-color: black;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+       
+    }
+}
 @media only screen and (max-width: 1200px) {
     .gl_head{
         text-align: center;
@@ -503,6 +524,7 @@ button:focus {
     }
   }
   @media only screen and (max-width: 1000px) {
+    
     .gl_head{
         text-align: center;
         font-weight: 100;
@@ -693,6 +715,20 @@ button:focus {
         
     }
   }
+  @media only screen and (max-width: 991px) {
+    #contactus{
+        .md-hide{
+            background-color: $m-light;
+            display: none;
+        }
+        input{
+            border-radius: 50px;
+        }
+        textarea{
+            border-radius: 20px;
+        }
+    }
+  }
   @media only screen and (max-width: 940px) {
     .gl_head{
         text-align: center;
@@ -779,6 +815,18 @@ button:focus {
                 margin-top: 4px;
             }
             
+        }
+    }
+    #contactus{
+        .md-hide{
+            background-color: $m-light;
+            display: none;
+        }
+        input{
+            border-radius: 50px;
+        }
+        textarea{
+            border-radius: 20px;
         }
     }
   }

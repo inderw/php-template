@@ -16,7 +16,7 @@
         <a class="nav-link text-white" href="fahome.php">FIND A HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">BLOG</a>
+        <a class="nav-link text-white" href="contact.php">CONTACT US</a>
       </li>
     </ul>
   
