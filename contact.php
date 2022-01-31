@@ -69,7 +69,7 @@ if(isset($_POST['submit'])){
     <div class="container-fluid" id="contactus">
         <div class='row m-0'>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="row shadow-lg mx-5 my-5 bg-white">
+                <div class="row shadow-lg contact-box bg-white">
                     <br>
                     <div class="md-hide img-bg col-lg-5 col-xl-5">
                         &nbsp;

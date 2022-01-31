@@ -478,6 +478,10 @@ nav .navbar-brand {
   background-color: #eece72;
 }
 
+#contactus .contact-box {
+  margin: 30px 20px 20px 20px;
+}
+
 #contactus input {
   border-radius: 50px;
 }

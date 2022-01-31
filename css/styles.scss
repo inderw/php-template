@@ -415,9 +415,13 @@ button:focus {
 
     
 }
+
 #contactus{
     .md-hide{
         background-color: $m-light;
+    }
+    .contact-box{
+        margin:30px 20px 20px 20px;
     }
     input{
         border-radius: 50px;
