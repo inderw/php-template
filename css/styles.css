@@ -1580,6 +1580,27 @@ nav .navbar-brand {
     margin-left: 3% !important;
     margin-right: 3% !important;
   }
+  #contactus .md-hide {
+    background-color: #eece72;
+    display: none;
+  }
+  #contactus .contact-box {
+    margin: 30px 0px 10px 0px;
+  }
+  #contactus h3 {
+    font-size: 1.5em;
+  }
+  #contactus form {
+    font-size: 1em;
+  }
+  #contactus input {
+    border-radius: 50px;
+    font-size: 0.8em !important;
+  }
+  #contactus textarea {
+    border-radius: 20px;
+    font-size: 0.8em;
+  }
 }
 
 @media only screen and (max-width: 420px) {
