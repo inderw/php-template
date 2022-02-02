@@ -3,9 +3,10 @@ require_once("includes/config.php");
 if (!isset($_SESSION['userSession'])) {
     header("Location:index.php");
 }
+$pid=$_GET['pid'];
 
 // set page title
-$title = "Dashboard";
+$title = "Edit Products";
 
 ?>
 
@@ -27,7 +28,7 @@ $title = "Dashboard";
     <!-- vendor css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.3/datatables.min.css" />
-    <title>Add Products</title>
+    <title>EDIT Products</title>
 
 </head>
 
@@ -51,13 +52,13 @@ $title = "Dashboard";
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <div class="page-header-title">
-                                <h4 class="fw-bold text-white">Add Products</h4>
+                                <h4 class="fw-bold text-white">EDIT Products</h4>
                                 <br>
                             </div>
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="home.php"><i class="feather icon-home"></i></a></li>
 
-                                <li class="breadcrumb-item"><a href="#">Add Products</a></li>
+                                <li class="breadcrumb-item"><a href="#">EDIT Products</a></li>
                             </ul>
                         </div>
                     </div>
@@ -68,7 +69,7 @@ $title = "Dashboard";
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Add Products</h5>
+                        <h5>EDIT Products</h5>
                     </div>
                     <div class="card-body">
                         <?php
@@ -134,45 +135,26 @@ $title = "Dashboard";
                             } else if (empty($imgfile)) {
                                 $errMSG = "Please Select IMAGE.";
                             } 
-                            else if (empty($imgfile2)) {
-                                $errMSG = "Please Select IMAGE 2.";
-                            }
-                            else if (empty($imgfile3)) {
-                                $errMSG = "Please Select IMAGE 3.";
-                            }
-                            else if (empty($imgfile4)) {
-                                $errMSG = "Please Select IMAGE 4.";
-                            }
-                            else if (empty($imgfile5)) {
-                                $errMSG = "Please Select IMAGE 5.";
-                            }
                             else if (empty($desc)) {
                                 $errMSG = "Please Enter description.";
                             } else {
-                                $q = "select prop_id as pid from prp_products ORDER BY prop_id desc ";
+                                $q = "select * from prp_products";
                                 $stmt = $DB->prepare($q);
                                 $stmt->execute();
                                 $result = $stmt->fetch();
-                                $productid = $result['pid'] + 1;
+                                $productid = $result['pid'] ;
                                 $upload_dir = "prod_img/$productid";
                               
-                                if (!is_dir($upload_dir)) {
-                                   mkdir('prod_img/'.$productid);
-                                } // upload directory
+                                // upload directory
                                   
                                   
                                
                                 $imgExt = strtolower(pathinfo($imgfile, PATHINFO_EXTENSION)); // get image extension
 
-                                // valid image extensions
-                                $valid_extensions = array('jpg', 'jpeg', 'png', 'GIF'); // valid extensions
-
-                                // rename uploading image
+                               
 
 
-
-                                if (in_array($imgExt, $valid_extensions)) {
-                                    
+      
                                     if ($imgSize < 1000000) {
                                         move_uploaded_file($tmp_dir, "$upload_dir/$imgfile");
                                     }  else{
@@ -198,16 +180,14 @@ $title = "Dashboard";
                                     }  else{
                                         $errMSG = "Sorry, your file is too large.";
                                     }
-                                }
-                               else {
-                                    $errMSG = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-                                }
+                                
+                               
                             }
                            
 
                             // if no error occured, continue ....
                             if (!isset($errMSG)) {
-                                $insert = "insert into prp_products set
+                                $update = "update prp_products set
                                 prop_size=:size,
                                 prop_img=:img,
                                 prop_img2=:img2,
@@ -217,7 +197,7 @@ $title = "Dashboard";
                                 prop_location=:location,
                                 prop_price=:price,
                                 prop_desc=:desc";
-                                $stmt = $DB->prepare($insert);
+                                $stmt = $DB->prepare($update);
                                 $stmt->bindParam(':size', $size);
                                 $stmt->bindParam(':img', $imgfile);
                                 $stmt->bindParam(':img2', $imgfile2);
@@ -232,9 +212,10 @@ $title = "Dashboard";
                         }
                         ?>
 
-                        <!-- <h4>Add product Page</h4>-->
+                        <!-- <h4>EDIT product Page</h4>-->
                         <?php
                         if (isset($errMSG)) {
+
                         ?>
                             <div class="alert alert-danger">
                                 <span class="glyphicon glyphicon-info-sign"></span> <strong><?php echo $errMSG; ?></strong>
@@ -247,13 +228,21 @@ $title = "Dashboard";
                             </div>
                         <?php
                         }
+
+                        $rec_list="select * from prp_products where prop_id=:id";
+                        $stmt=$DB->prepare($rec_list);
+                        $stmt->bindValue(':id',$pid);
+                        $stmt->execute();
+                        $result=$stmt->fetchAll();
+                        foreach($result as $rec){
                         ?>
+
                         <div class="row">
                             <div class="col-md-12">
                                 <form method="post" enctype="multipart/form-data">
                                     <br>
-                                    <div class="input-group col-xs-6"> <span class="input-group-addon btn btn-primary"><i class="fa fa-text-width"></i></span>
-                                        <input type="text" class="form-control" name="prop_size" placeholder="Home Size">
+                                    <div class="input-group col-xs-6"> <span class="input-group-EDITon btn btn-primary"><i class="fa fa-text-width"></i></span>
+                                        <input type="text" class="form-control" name="prop_size" value="<?php echo $rec['prop_size'] ?>"  placeholder="Home Size">
                                     </div>
 
                                     <br>
@@ -262,8 +251,8 @@ $title = "Dashboard";
                                             <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="form-control" id="imgfile" name="imgfile" placeholder="Image File">
-                                            <label class="custom-file-label" for="imgfile">Choose Product Image 1</label>
+                                            <input type="file" class="form-control" value="<?php echo $rec['prop_img'] ?>" id="imgfile" name="imgfile" placeholder="Image File">
+                                            <label class="custom-file-label" for="imgfile"><?php echo $rec['prop_img'] ?></label>
                                         </div>
                                     </div>
                                     <br>
@@ -272,8 +261,8 @@ $title = "Dashboard";
                                             <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="form-control" id="imgfile2" name="imgfile2" placeholder="Image File2">
-                                            <label class="custom-file-label" for="imgfile2">Choose Product Image 2</label>
+                                            <input type="file" class="form-control" value="<?php echo $rec['prop_img2'] ?>" id="imgfile2" name="imgfile2" placeholder="Image File2">
+                                            <label class="custom-file-label" for="imgfile2"><?php echo $rec['prop_img2'] ?></label>
                                         </div>
                                     </div>
                                     <br>
@@ -282,8 +271,8 @@ $title = "Dashboard";
                                             <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="form-control" id="imgfile3" name="imgfile3" placeholder="Image File3">
-                                            <label class="custom-file-label" for="imgfile3">Choose Product Image 3</label>
+                                            <input type="file" class="form-control" value="<?php echo $rec['prop_img3'] ?>" id="imgfile3" name="imgfile3" placeholder="Image File3">
+                                            <label class="custom-file-label" for="imgfile3"><?php echo $rec['prop_img4'] ?></label>
                                         </div>
                                     </div>
                                     <br>
@@ -292,8 +281,8 @@ $title = "Dashboard";
                                             <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="form-control" id="imgfile4" name="imgfile4" placeholder="Image File4">
-                                            <label class="custom-file-label" for="imgfile4">Choose Product Image 4</label>
+                                            <input type="file" class="form-control" value="<?php echo $rec['prop_img4'] ?>" id="imgfile4" name="imgfile4" placeholder="Image File4">
+                                            <label class="custom-file-label" for="imgfile4"><?php echo $rec['prop_img4'] ?></label>
                                         </div>
                                     </div>
                                     <br>
@@ -302,29 +291,30 @@ $title = "Dashboard";
                                             <button class="btn  btn-primary" type="button"><i class="fas fa-images"></i></button>
                                         </div>
                                         <div class="custom-file">
-                                            <input type="file" class="form-control" id="imgfile5" name="imgfile5" placeholder="Image File5">
-                                            <label class="custom-file-label" for="imgfile5">Choose Product Image 5</label>
+                                            <input type="file" class="form-control" value="<?php echo $rec['prop_img5'] ?>" id="imgfile5" name="imgfile5" placeholder="Image File5">
+                                            <label class="custom-file-label" for="imgfile5"><?php echo $rec['prop_img5'] ?></label>
                                         </div>
                                     </div>
+                                    
                                     <br>
 
-                                    <div class="input-group col-xs-6"> <span class="input-group-addon btn btn-primary"><i class="fas fa-location-arrow"></i></span>
-                                        <input type="text" class="form-control" name="location" placeholder="Home Location">
+                                    <div class="input-group col-xs-6"> <span class="input-group-EDITon btn btn-primary"><i class="fas fa-location-arrow"></i></span>
+                                        <input type="text" class="form-control"value="<?php echo $rec['prop_location'] ?>" name="location" placeholder="Home Location">
                                     </div>
                                     <!--<br>
 			 
-              <div class="input-group col-xs-6"> <span class="input-group-addon"><i class="fa fa-image"></i></span>
+              <div class="input-group col-xs-6"> <span class="input-group-EDITon"><i class="fa fa-image"></i></span>
                 <input type="file" class="form-control" name="ptitle" placeholder="product Image">
               </div>-->
                                     <br>
 
-                                    <div class="input-group col-xs-6"> <span class="input-group-addon btn btn-primary"><i class="fas fa-dollar-sign"></i></span>
-                                        <input type="text" class="form-control" name="price" placeholder="Home Price">
+                                    <div class="input-group col-xs-6"> <span class="input-group-EDITon btn btn-primary"><i class="fas fa-dollar-sign"></i></span>
+                                        <input type="text" class="form-control" value="<?php echo $rec['prop_price'] ?>" name="price" placeholder="Home Price">
                                     </div>
                                     <br>
 
-                                    <div class="input-group col-xs-6"> <span class="input-group-addon btn btn-primary"><i class="fas fa-text-height"></i></span>
-                                        <input type="text" class="form-control" name="desc" placeholder="Product Description">
+                                    <div class="input-group col-xs-6"> <span class="input-group-EDITon btn btn-primary"><i class="fas fa-text-height"></i></span>
+                                        <input type="text" class="form-control" value="<?php echo $rec['prop_desc'] ?>" name="desc" placeholder="Product Description">
                                     </div>
                                     <br>
                                     <div class="input-group text-center">
@@ -332,8 +322,9 @@ $title = "Dashboard";
                                          
                                         <a href="javascript:self.history.back();" class="btn btn-danger">Back</a>
                                     </div>
-
+                                
                                 </form>
+                             <?php } ?>
                             </div>
 
                         </div>
@@ -351,17 +342,17 @@ $title = "Dashboard";
                     // Example starter JavaScript for disabling form submissions if there are invalid fields
                     (function() {
                         'use strict';
-                        window.addEventListener('load', function() {
+                        window.EDITEventListener('load', function() {
                             // Fetch all the forms we want to apply custom Bootstrap validation styles to
                             var forms = document.getElementsByClassName('needs-validation');
                             // Loop over them and prevent submission
                             var validation = Array.prototype.filter.call(forms, function(form) {
-                                form.addEventListener('submit', function(event) {
+                                form.EDITEventListener('submit', function(event) {
                                     if (form.checkValidity() === false) {
                                         event.preventDefault();
                                         event.stopPropagation();
                                     }
-                                    form.classList.add('was-validated');
+                                    form.classList.EDIT('was-validated');
                                 }, false);
                             });
                         }, false);

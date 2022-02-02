@@ -51,8 +51,8 @@
                                 foreach ($result as $row) {
                             ?>
                                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 py-2">
-                                        <div class="card carfa_card">
-                                            <img class="card-img-top w-100" src="admin/prod_img/<?php echo $row['prop_img'] ?>" alt="Card image cap">
+                                        <div class="card carfa_card" onclick="window.location.href='prp_details.php?id=<?php echo $row['prop_id'];?>'">
+                                            <img class="card-img-top w-100" src="admin/prod_img/<?php echo $row['prop_id'];?>/<?php echo $row['prop_img']; ?>" alt="Card image cap">
                                             <div class="card-body">
                                                 <h5 class="card-title fa_title"><?php echo $row['prop_size']; ?><a href="#">Contact Agent</a></h5>
                                                 <p class="card-text fa_text"><?php echo $row['prop_location']; ?></p>

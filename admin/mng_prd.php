@@ -104,7 +104,7 @@
                                                 <td> <?php echo $row->prop_desc; ?></td>
                                                 <td>
 
-                                                    <a href="edit_song.php?sgid=<?php echo $row->prop_id; ?>" title="Click For Edit" onClick="return confirm('Sure to Edit ?')" class="btn btn-primary btn-sm" data-toggle="tooltip"><i class="feather icon-edit-2 fa-2x"></i></a>
+                                                    <a href="edit_prd.php?pid=<?php echo $row->prop_id; ?>" title="Click For Edit" onClick="return confirm('Sure to Edit ?')" class="btn btn-primary btn-sm" data-toggle="tooltip"><i class="feather icon-edit-2 fa-2x"></i></a>
                                                     &nbsp;
 
                                                     <a href="?sdelid=<?php echo $row->prop_id; ?>" title="Click For Delete" onClick="return confirm('Sure to Delete ?')" class="btn btn-danger btn-sm" data-toggle="tooltip" ><i class="feather icon-trash fa-2x"></i></a>
